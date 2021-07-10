@@ -4,6 +4,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import theme from "./ui/Theme";
 import Header from "./ui/Header";
 import Footer from "./ui/Footer";
+import { Home, Services } from "./pages";
 
 export default function App() {
 	return (
@@ -11,8 +12,8 @@ export default function App() {
 			<BrowserRouter>
 				<Header />
 				<Switch>
-					<Route exact path="/" component={() => <div>Home</div>} />
-					<Route exact path="/services" component={() => <div>Services</div>} />
+					<Route exact path="/" component={Home} />
+					<Route exact path="/services" component={Services} />
 					<Route exact path="/tips" component={() => <div>Tips</div>} />
 					<Route exact path="/gallery" component={() => <div>Gallery</div>} />
 					<Route

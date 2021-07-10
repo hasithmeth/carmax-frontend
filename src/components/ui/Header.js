@@ -44,6 +44,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 	logoContainer: {
 		padding: 0,
+		marginBottom: -3.6,
 		"&:hover": {
 			backgroundColor: "transparent",
 		},
@@ -72,7 +73,7 @@ const useStyles = makeStyles((theme) => ({
 		width: 35,
 	},
 	drawerStyle: {
-		width: "17rem",
+		width: "16.6rem",
 		backgroundColor: theme.palette.primary.main,
 		alignItems: "center",
 		justify: "center",
@@ -100,7 +101,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 	callNow: {
 		marginTop: 20,
-		height: 60,
+		height: 50,
 		borderRadius: 50,
 		"&:hover": {
 			backgroundColor: theme.palette.secondary.light,
@@ -111,8 +112,8 @@ const useStyles = makeStyles((theme) => ({
 	},
 	telIcon: {
 		color: theme.palette.common.white,
-		height: 30,
-		width: 30,
+		height: 25,
+		width: 25,
 	},
 	drawerLink: {
 		flex: 1,
@@ -220,7 +221,7 @@ export default function Header() {
 				PaperProps={{ className: classes.drawerStyle }}
 			>
 				<List>
-					<ListItem style={smallSize ? { top: -10 } : undefined}>
+					<ListItem style={smallSize ? { top: -12 } : { top: -5 }}>
 						<IconButton
 							aria-label="close-menu"
 							onClick={() => setDrawerOpen(false)}
@@ -234,7 +235,7 @@ export default function Header() {
 								? classes.selectedDrawerItemContainer
 								: classes.idleDrawerItemContainer
 						}
-						style={smallSize ? { marginTop: -14 } : { marginTop: 1 }}
+						style={smallSize ? { marginTop: -18 } : { marginTop: -2.7 }}
 					>
 						<Link
 							onClick={() => {
